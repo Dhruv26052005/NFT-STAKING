@@ -38,6 +38,34 @@ anchor build
 ```bash
 bun test
 ```
+Project Structure
+staking/
+│
+├── programs/
+│   └── staking/
+│       └── src/
+│           ├── instructions/
+│           ├── state/
+│           ├── constants.rs
+│           ├── error.rs
+│           └── lib.rs
+│
+├── tests/
+│   ├── functional/
+│   ├── setup.ts
+│   ├── constants.ts
+│   └── pda.ts
+│
+├── migrations/
+│   └── deploy.ts
+│
+├── target/
+│
+├── Anchor.toml
+├── Cargo.toml
+├── package.json
+├── tsconfig.json
+└── README.md
 
 Notes and safety
 - The repository keeps Anchor configuration files and program code intact; do not change `Anchor.toml` or the program `Cargo.toml` unless you understand how program IDs and builds are managed.
